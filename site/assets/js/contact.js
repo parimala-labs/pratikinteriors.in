@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     (function ($) {
         "use strict";
 
@@ -10,6 +9,7 @@ $(document).ready(function () {
 
         // validate contactForm form
         $(function () {
+
             $('#contactForm').validate({
                 rules: {
                     name: {
@@ -50,12 +50,11 @@ $(document).ready(function () {
                         required: "no email, no message"
                     },
                     message: {
-                        required: "hmm...yea, you have to write something to send this form.",
+                        required: "hmm...yeah, you have to write something to send this form.",
                         minlength: "thats all? really?"
                     }
                 },
                 submitHandler: function (form) {
-                    console.log("test")
                     $(form).ajaxSubmit({
                         type: "POST",
                         data: $(form).serialize(),
@@ -68,6 +67,7 @@ $(document).ready(function () {
                                 $('#success').fadeIn()
                                 $('.modal').modal('hide');
                                 $('#success').modal('show');
+                                $("#status").html("Thank you for contacting us. We have recieved your message and will connect with you soon");
                             })
                         },
                         error: function () {
@@ -75,6 +75,7 @@ $(document).ready(function () {
                                 $('#error').fadeIn()
                                 $('.modal').modal('hide');
                                 $('#error').modal('show');
+                                $("#status").html("Something went wrong");
                             })
                         }
                     })

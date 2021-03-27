@@ -28,7 +28,7 @@
 
           <div class="row">
             <div class="col-12">
-              <h2 class="contact-title">Get in Touch</h2>
+              <h3 id="status" class="contact-title" style="! Color:#2a2a2a">Get in Touch</h3>
             </div>
             <div class="col-lg-8">
               <form
@@ -39,7 +39,11 @@
                 novalidate="novalidate"
               >
               <div class="row">
-                <div class="col-12" style="display:auto;">
+                <div id="status" class="contact-title" style="! Color:#2a2a2a">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12" style="display:none;">
                   <input type="text" id="website" name="website"/>
                 </div>
               </div>
